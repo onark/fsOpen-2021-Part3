@@ -7,9 +7,10 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
     "build:ui": "rm -rf build && cd ../../../fsOpen-2021/part2/phonebook/ && npm run build --prod && cp -r build ../../../HerokuFSOpen/fsOpen-2021_part3/fsOpen-2021_part3_phonebook/",
     "deploy": "git push heroku HEAD:master",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push heroku master && npm run deploy",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "author": "",
@@ -23,6 +24,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.1.0",
     "nodemon": "^2.0.14"
   }
 }

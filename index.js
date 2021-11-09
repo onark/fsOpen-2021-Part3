@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }const express = require('express')
@@ -56,7 +57,7 @@ app.post('/api/persons', (request, response, next) => {
   if (!body.name || !body.number) {
     return response.status(400).json({ error: 'name or number missing' })
   }
-  
+
   const person = new Person({
     name: body.name,
     number: body.number,

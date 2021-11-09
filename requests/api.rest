@@ -5,7 +5,7 @@ DELETE http://localhost:3001/api/persons/3 HTTP/1.1
 GET http://localhost:3001/api/persons/
 
 ###
-POST http://localhost:3001/api/persons/ HTTP/1.1
+POST https://stormy-peak-42771.herokuapp.com/api/persons/ HTTP/1.1
 content-type: application/json
 
 {
